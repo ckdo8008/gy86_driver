@@ -14,6 +14,8 @@ class IMUNode(Node):
         # 파라미터 설정
         self.imu.mpu6050.gyroscope_offsets = {
             'gx': self.get_parameter("gyroscope_offsets.gx").value,
+            'gy': self.get_parameter("/imu_node/gyroscope_offsets/gy").value,
+            'gz': self.get_parameter("/imu_node/gyroscope_offsets/gz").value
             # ...
         }
         # 나머지 파라미터도 유사하게 설정
